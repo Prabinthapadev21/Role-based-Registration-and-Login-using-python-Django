@@ -1,23 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-<h2>Login</h2>
+{% block title %}Login{% endblock %}
 
-{% if msg %}
-<p style="color:red;">{{ msg }}</p>
-{% endif %}
+{% block content %}
+<div class="form-box">
+    <h2>Login</h2>
 
-<form method="post">
-    {% csrf_token %}
+    {% if msg %}
+        <p class="error">{{ msg }}</p>
+    {% endif %}
 
-    {{ form.as_p }}
+    <form method="POST">
+        {% csrf_token %}
+        
+        {{ form.as_p }}
 
-    <button type="submit">Login</button>
-</form>
+        <button type="submit" class="btn">Login</button>
+    </form>
 
-</body>
-</html>
+    <p class="text-center">
+        Don't have an account?
+        <a href="{% url 'register' %}">Register</a>
+    </p>
+</div>
+{% endblock %}
