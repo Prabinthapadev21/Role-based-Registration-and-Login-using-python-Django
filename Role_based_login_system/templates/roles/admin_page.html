@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Admin Dashboard</h2>
+    <p>Welcome, <strong>{{ request.user.username }}</strong></p>
+</div>
+
+<div class="card">
+    <h3>Admin Actions</h3>
+    <ul>
+        <li>Manage Users</li>
+        <li>View Reports</li>
+        <li>System Configuration</li>
+    </ul>
+</div>
+{% endblock %}

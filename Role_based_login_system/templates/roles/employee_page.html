@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Employee Dashboard{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Employee Dashboard</h2>
+    <p>Welcome, <strong>{{ request.user.username }}</strong></p>
+</div>
+
+<div class="card">
+    <h3>Employee Tasks</h3>
+    <ul>
+        <li>View Assigned Work</li>
+        <li>Update Task Status</li>
+        <li>Check Notices</li>
+    </ul>
+</div>
+{% endblock %}

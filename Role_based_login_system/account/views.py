@@ -49,10 +49,10 @@ def logout_view(request):
     return redirect('login')
 
 def admin_page(request):
-    return render(request,'pages/admin_page.html')
+    return render(request,'roles/admin_page.html')
 
 def employee_page(request):
-    return render(request,'pages/employee_page.html')
+    return render(request,'roles/employee_page.html')
 
 def customer_page(request):
-    return render(request,'pages/customer_page.html')
+    return render(request,'roles/customer_page.html')
